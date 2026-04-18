@@ -3,7 +3,6 @@
 ##
 
 Projekt polega na stworzeniu modelu uczenia maszynowego, który analizuje komentarze użytkowników na platformie Reddit w celu wykrywania potencjalnej aktywności botów.
-
 Model wykorzystuje cechy językowe oraz statystyczne, aby sklasyfikować treści jako:
 
 * generowane przez człowieka
@@ -136,7 +135,3 @@ AUC = 0.98, model w 98% przypadków poprawnie rankinguje przykład pozytywny wy�
 Większość accuracy otrzymanych w procesie klasyfikowania danych jest w przedziale 80-99, wynika to najprawdopodobniej z syntetyczności danych i mocno skorelowanych cech. Najbardziej znaczącą cechą okazuje się czas odpowiedzi, oprócz niej cechami wskazującymi na komentarz wygenerowany przez bota jest obecność linku zewnętrznego, średnia długość słów w komentarzu i niski czas istnienia konta.
 ---
 
-
-## Autor
-
-Projekt wykonany w ramach zajęć z uczenia maszynowego.
