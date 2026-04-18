@@ -14,10 +14,9 @@ Projekt jest inspirowany koncepcją tzw. *"Dead Internet Theory"*.
 
 ## Dane
 
-Zbiór danych pochodzi z Kaggle:
-https://www.kaggle.com/datasets/nudratabbas/the-dead-internet-theory-reddit-bot-vs-human
+Źródło danych: https://www.kaggle.com/datasets/nudratabbas/the-dead-internet-theory-reddit-bot-vs-human
 
-Zawiera komentarze wraz z etykietą (bot / human).
+
 
 ---
 
