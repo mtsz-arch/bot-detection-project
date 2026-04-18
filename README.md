@@ -97,21 +97,45 @@ T-SNE pokazuje że klasy nie są dobrze separowalne globalnie. Boty i ludzie mie
 
 * zastosowanie algorytmów klasyfikacji
 * podział na zbiór treningowy i testowy
+KNN
+<img width="577" height="415" alt="obraz" src="https://github.com/user-attachments/assets/6bcc6147-7523-44ac-810f-730654733cd7" />
+<img width="652" height="522" alt="obraz" src="https://github.com/user-attachments/assets/de9b71b8-1929-42d9-b05c-bad873126f8e" />
+Żeby uniknąć przeuczenia bierzemy drugie najlepsze k
+<img width="637" height="572" alt="obraz" src="https://github.com/user-attachments/assets/d70426bb-01c0-4129-a778-53cb337a3c32" />
+Model KNN osiąga dobrą i stabilną jakość predykcji, z równowagą między klasami i bez istotnych problemów z biasem.
 
+Drzewo decyzyjne
+<img width="750" height="697" alt="obraz" src="https://github.com/user-attachments/assets/5622f79d-88f6-41d6-8edb-ab4894d398a5" />
+<img width="735" height="512" alt="obraz" src="https://github.com/user-attachments/assets/c4a56504-ea12-4a0e-91af-712f0434c037" />
+Drzewa decyzyjne wskazują reply_delay_seconds jako cechę wiodącą co pasuje do wcześniejszych wykresów
+<img width="356" height="140" alt="obraz" src="https://github.com/user-attachments/assets/bed282a1-314d-49f1-b814-b45c2d32cd5f" />
+przez tak silną cechę wiodącą drzewa decyzyjne osiągają accuracy na poziomie prawie 1.00
+
+Regresja logistyczna
+<img width="806" height="540" alt="obraz" src="https://github.com/user-attachments/assets/43382077-c28c-4cd2-918f-799e7d1a7940" />
+Selektor wybrał tylko jedną cechę, która okazała się cecha wiodąca zbioru - reply_delay_seconds
+<img width="387" height="152" alt="obraz" src="https://github.com/user-attachments/assets/3a575ed0-944e-47a0-a69a-d2e3a31f8071" />
+Przez co wszystkie wyniki w classification report są takie wyoskie. Po wykonaniu regresji na zbiorze bez cechy wiodącej
+<img width="701" height="586" alt="obraz" src="https://github.com/user-attachments/assets/c490bd0a-f3e1-4c18-a68f-1da313e7326d" />
+
+Otrzymujemy wynik 85%. Bez dominującej cechy model nadal działa przyzwoicie, co znaczy że pozostałe cechy (avg_word_length, contains_links, user_karma itd.) też niosą informację — tylko słabszą.
+
+SVM
+<img width="531" height="345" alt="obraz" src="https://github.com/user-attachments/assets/58f767bd-2fd4-46e7-a4a4-1474604122c5" />
+Model SVM osiąga bardzo dobre wyniki i przewyższa KNN zarówno pod względem dokładności, jak i jakości predykcji. Charakteryzuje się:
+
+wysoką skutecznością,
+dobrą równowagą między klasami,
+małą liczbą błędów klasyfikacji.
+
+<img width="632" height="446" alt="obraz" src="https://github.com/user-attachments/assets/c0ee8c50-d6f1-401f-8caa-f9024e08b365" />
+AUC = 0.98, model w 98% przypadków poprawnie rankinguje przykład pozytywny wyżej niż negatywny
 ### 5. Ewaluacja
 
-* ocena skuteczności modelu
 * analiza wyników
-
+Większość accuracy otrzymanych w procesie klasyfikowania danych jest w przedziale 80-99, wynika to najprawdopodobniej z syntetyczności danych i mocno skorelowanych cech. Najbardziej znaczącą cechą okazuje się czas odpowiedzi, oprócz niej cechami wskazującymi na komentarz wygenerowany przez bota jest obecność linku zewnętrznego, średnia długość słów w komentarzu i niski czas istnienia konta.
 ---
 
-## Wyniki
-
-Model pozwala na rozróżnianie komentarzy generowanych przez boty i ludzi na podstawie analizy tekstu oraz cech statystycznych.
-
-(Szczegółowe wyniki znajdują się w notebooku)
-
----
 
 ## Autor
 
