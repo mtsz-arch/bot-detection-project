@@ -35,10 +35,19 @@ Zawiera komentarze wraz z etykietą (bot / human).
 
 ### 1. Wczytanie i eksploracja danych
 
-* analiza struktury danych (`df.info()`)
-* sprawdzenie braków (`df.isnull()`)
+* analiza struktury danych
+ <img width="602" height="298" alt="obraz" src="https://github.com/user-attachments/assets/0fee07f7-4276-4613-8afb-0b3d6f228d83" />
+<img width="290" height="383" alt="obraz" src="https://github.com/user-attachments/assets/1c9e97f9-b2aa-4ee7-8389-e48265186445" />
 * wstępna eksploracja
+<img width="661" height="137" alt="obraz" src="https://github.com/user-attachments/assets/3fb4ce5a-f7a7-4b0f-a987-7e00b86c9a40" />
+<img width="661" height="137" alt="obraz" src="https://github.com/user-attachments/assets/ce082948-dfa5-411e-acda-f8ecf54a34b8" />
 
+- Najbardziej rozróżniającą cechą okazała się średnia długość słów (`avg_word_length`) — boty częściej używają dłuższych, bardziej jednorodnych słów.
+- Zmienna `contains_links` sugeruje, że boty częściej zawierają linki niż komentarze pisane przez ludzi.
+- Pozostałe cechy, takie jak `user_karma`, `account_age_days` czy `sentiment_score`, mają ograniczoną zdolność separacji klas.
+- Nie zaobserwowano silnych korelacji liniowych między większością zmiennych, co sugeruje potrzebę bardziej zaawansowanych modeli lub feature engineeringu.
+
+Wniosek: skuteczna klasyfikacja botów wymaga kombinacji wielu cech — pojedyncze zmienne nie są wystarczające do jednoznacznego rozróżnienia.
 ### 2. Przygotowanie danych
 
 * czyszczenie danych
